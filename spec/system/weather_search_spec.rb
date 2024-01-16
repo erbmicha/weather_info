@@ -17,12 +17,12 @@ describe "weather search" do
     end
 
     expect(page).to have_content(I18n.t("locations.results.current_title", address: "PORTLAND, OR"))
-    expect(page).to have_content(I18n.t("locations.results.current_temp", temp: 24.9))
+    expect(page).to have_content(I18n.t("locations.results.current_temp", temp: 22.7))
     expect(page).to have_content(
-      I18n.t("locations.results.current_feels_like", temp: 15.3)
+      I18n.t("locations.results.current_feels_like", temp: 12.6)
     )
     expect(page).to have_content(
-      I18n.t("locations.results.current_humidity", humidity: 45.6)
+      I18n.t("locations.results.current_humidity", humidity: 47.2)
     )
     expect(page).to have_content(
       I18n.t("locations.results.current_chance_of_rain", chance_of_rain: 0.0)
@@ -30,12 +30,12 @@ describe "weather search" do
     expect(page).to have_content(
       I18n.t(
         "locations.results.current_wind",
-        wind_direction: 116.0,
+        wind_direction: 98.0,
         wind: 9.3
       )
     )
     expect(page).to have_content(
-      I18n.t("locations.results.current_gusts", gusts: 18.9)
+      I18n.t("locations.results.current_gusts", gusts: 21.0)
     )
   end
 end

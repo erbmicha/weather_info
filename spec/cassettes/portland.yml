@@ -35,4 +35,39 @@ http_interactions:
       string: !binary |-
         W3sicGxhY2VfaWQiOjMxMzczNDYzOSwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6InJlbGF0aW9uIiwib3NtX2lkIjoxODY1NzksImxhdCI6IjQ1LjUyMDI0NzEiLCJsb24iOiItMTIyLjY3NDE5NCIsImNsYXNzIjoiYm91bmRhcnkiLCJ0eXBlIjoiYWRtaW5pc3RyYXRpdmUiLCJwbGFjZV9yYW5rIjoxNiwiaW1wb3J0YW5jZSI6MC42NTM1NjU3MTc0MzM3NjgzLCJhZGRyZXNzdHlwZSI6ImNpdHkiLCJuYW1lIjoiUG9ydGxhbmQiLCJkaXNwbGF5X25hbWUiOiJQb3J0bGFuZCwgTXVsdG5vbWFoIENvdW50eSwgT3JlZ29uLCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJjaXR5IjoiUG9ydGxhbmQiLCJjb3VudHkiOiJNdWx0bm9tYWggQ291bnR5Iiwic3RhdGUiOiJPcmVnb24iLCJJU08zMTY2LTItbHZsNCI6IlVTLU9SIiwiY291bnRyeSI6IlVuaXRlZCBTdGF0ZXMiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyI0NS40MzI1MzYwIiwiNDUuNjUyODgxMiIsIi0xMjIuODM2NzQ4OSIsIi0xMjIuNDcyMDI1MiJdfV0=
   recorded_at: Mon, 15 Jan 2024 12:05:25 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=PORTLAND,%20OR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 16 Jan 2024 03:32:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '599'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjMxMzczNDYzOSwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6InJlbGF0aW9uIiwib3NtX2lkIjoxODY1NzksImxhdCI6IjQ1LjUyMDI0NzEiLCJsb24iOiItMTIyLjY3NDE5NCIsImNsYXNzIjoiYm91bmRhcnkiLCJ0eXBlIjoiYWRtaW5pc3RyYXRpdmUiLCJwbGFjZV9yYW5rIjoxNiwiaW1wb3J0YW5jZSI6MC42NTM1NjU3MTc0MzM3NjgzLCJhZGRyZXNzdHlwZSI6ImNpdHkiLCJuYW1lIjoiUG9ydGxhbmQiLCJkaXNwbGF5X25hbWUiOiJQb3J0bGFuZCwgTXVsdG5vbWFoIENvdW50eSwgT3JlZ29uLCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJjaXR5IjoiUG9ydGxhbmQiLCJjb3VudHkiOiJNdWx0bm9tYWggQ291bnR5Iiwic3RhdGUiOiJPcmVnb24iLCJJU08zMTY2LTItbHZsNCI6IlVTLU9SIiwiY291bnRyeSI6IlVuaXRlZCBTdGF0ZXMiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyI0NS40MzI1MzYwIiwiNDUuNjUyODgxMiIsIi0xMjIuODM2NzQ4OSIsIi0xMjIuNDcyMDI1MiJdfV0=
+  recorded_at: Tue, 16 Jan 2024 03:32:49 GMT
 recorded_with: VCR 6.2.0
