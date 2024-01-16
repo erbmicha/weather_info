@@ -27,8 +27,6 @@ class LocationsController < ApplicationController
   end
 
   def location_params
-    params[:location][:address] = params[:location][:address].strip.upcase
-
     params.require(:location).permit(:address)
   end
 end

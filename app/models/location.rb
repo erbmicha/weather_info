@@ -4,4 +4,6 @@ class Location < ApplicationRecord
   after_validation :geocode, if: ->(obj) { obj.address.present? and obj.address_changed? }
 
   validates :address, presence: true
+
+  normalizes :address, with: ->(address) { address.strip.upcase }
 end
