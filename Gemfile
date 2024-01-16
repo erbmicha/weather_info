@@ -47,13 +47,23 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "geocoder", "~> 1.8"
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
+  gem "dotenv-rails"
   gem "rspec-rails", "~> 6.1.0"
 end
 
 group :development do
-  gem "web-console"
   gem "rack-mini-profiler"
+  gem "rubocop-rails"
+  gem "web-console"
 end
 
+group :test do
+  gem "capybara"
+  gem "capybara-screenshot"
+  gem "vcr"
+  gem "webmock"
+end
