@@ -1,0 +1,13 @@
+<%= form_for Location.new, html: { class: "form-horizontal" } do |f| %>
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <%= f.label :address, t(".address_label"), class: "col-form-label" %>
+    </div>
+    <div class="col-auto">
+      <%= f.text_field :address, class: "form-control", autofocus: true %>
+    </div>
+    <div class="col-auto">
+      <%= f.submit t(".submit"), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

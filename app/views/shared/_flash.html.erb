@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <% flash.each do |flash_key, flash_value| %>
+      <% unless flash_value.blank? || flash_key == "timedout" %>
+        <div class="alert alert-<%= flash_key %>">
+          <button class="close" aria-hidden="true" data-dismiss="alert" type="button">
+            &times;
+          </button>
+          <div class="strong">
+            <%= flash_key.capitalize %>!
+            <% if flash_value.is_a?(Array) %>
+              <ul>
+                <% flash_value.each do |fv| %>
+                  <li><%= fv %></li>
+                <% end %>
+              </ul>
+            <% else %>
+              <%= flash_value %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  $(".alert-success, .alert-info").fadeOut(6000);
+</script>

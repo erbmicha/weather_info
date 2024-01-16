@@ -11,6 +11,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <h1 class="mt-5 title-font"><%= t("title") %></h1>
+      <%= yield %>
+    </div>
   </body>
 </html>

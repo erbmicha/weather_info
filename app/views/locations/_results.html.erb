@@ -1,0 +1,46 @@
+<div class="mt-4">
+  <h2>
+    <%= t ".current_title", address: @location.address %>
+  </h2>
+  <p>
+    <%= t ".current_temp", temp: @weather["currentConditions"]["temp"] %> <%= t("fahrenheit") %>
+  </p>
+  <p>
+    <%= t ".current_feels_like", temp: @weather["currentConditions"]["feelslike"] %> <%= t("fahrenheit") %>
+  </p>
+  <p>
+    <%= t ".current_humidity", humidity: number_to_percentage(@weather["currentConditions"]["humidity"]) %>
+  </p>
+  <p>
+    <%= t ".current_chance_of_rain", chance_of_rain: number_to_percentage(@weather["currentConditions"]["precipprob"]) %>
+  </p>
+  <p>
+    <%= t ".current_wind", wind_direction: @weather["currentConditions"]["winddir"], wind: @weather["currentConditions"]["windspeed"] %> <%= t "mph" %>
+    <% if @weather["currentConditions"]["windgust"].positive? %>
+      (<%= t ".current_gusts", gusts: @weather["currentConditions"]["windgust"] %> <%= t "mph" %>)
+    <% end %>
+  </p>
+</div>
+<div class="mt-4">
+  <h2><%= t "forecast_title" %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"><%= t ".forecast_date" %></th>
+        <th scope="col"><%= t ".forecast_high" %> (<%= t "fahrenheit" %>)</th>
+        <th scope="col"><%= t ".forecast_low" %> (<%= t "fahrenheit" %>)</th>
+        <th scope="col"><%= t ".conditions" %></th>
+      </tr>
+    </thead>
+    <tbody id="forecastTable">
+      <% @weather["days"].each do |day| %>     <!-- Forecast data will be inserted here -->
+        <tr>
+          <td><%= usa_date(day["datetime"]) %></td>
+          <td><%= day["tempmax"] %><%= t("fahrenheit") %></td>
+          <td><%= day["tempmin"] %><%= t("fahrenheit") %></td>
+          <td><%= day["description"] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
