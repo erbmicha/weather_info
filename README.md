@@ -10,3 +10,6 @@ Run the setup script with: `bin/setup`.
 
 Then you can either run the app locally with `bin/dev` or run the test suite with `bin/rails spec`.
 
+## Screenshot
+![Screenshot](public/Screenshot.png)
+
