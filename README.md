@@ -4,7 +4,7 @@ This is a Weather Information application.
 
 ## How To Run
 
-Go to [http://www.visualcrossing.com](Visual Crossing) and register for an API key and add it to the `.env.development` and `.env.test` files.
+Go to [Visual Crossing](http://www.visualcrossing.com) and register for an API key and add it to the `.env.development` and `.env.test` files.
 
 Run the setup script with: `bin/setup`.
 
